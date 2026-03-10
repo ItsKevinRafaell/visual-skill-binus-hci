@@ -1,0 +1,365 @@
+/* --- 1. CONFIG & VARIABLES --- */
+:root {
+    --bg-black: #050505;
+    --bg-dark-grey: #121212;
+    --bg-card: #1E1E1E;
+    --text-white: #FFFFFF;
+    --text-grey: #B0B0B0;
+    --green-accent: #00E676;
+    --font-primary: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    font-family: var(--font-primary);
+    margin: 0;
+}
+
+/* --- 2. NAVBAR (Copy Style dari Index/Career) --- */
+.navbar {
+    background: rgba(5, 5, 5, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 15px 5%;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li { margin-left: 20px; }
+
+.menu li a {
+    padding: 8px 16px;
+    color: var(--text-white);
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    color: var(--green-accent);
+    text-shadow: 0 0 10px rgba(0, 230, 118, 0.5);
+}
+
+.about-hero {
+    min-height: 70vh; /* Tinggi diperbesar sedikit agar gambar lebih lega */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 10%;
+    position: relative;
+    
+    /* --- BAGIAN BACKGROUND IMAGE --- */
+    /* Layer 1: Gradasi hitam transparan (agar teks putih terbaca) */
+    /* Layer 2: URL Gambar Anda */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.95)), url('../assets/us.png');
+    
+    /* Agar gambar responsif dan tetap di tengah */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efek Parallax (Background diam saat discroll) */
+    
+    /* Border bawah tipis */
+    border-bottom: 1px solid #333;
+}
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    color: var(--text-white);
+    margin-bottom: 20px;
+    font-weight: 700;
+    /* Glow effect pada teks */
+    text-shadow: 0 0 30px rgba(0, 230, 118, 0.3); 
+    z-index: 2; /* Pastikan teks di atas background */
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    color: var(--text-grey);
+    max-width: 700px;
+    line-height: 1.6;
+    z-index: 2;
+}
+
+/* --- 4. STORY SECTION --- */
+.story-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10%;
+    gap: 60px;
+    background: var(--bg-black);
+}
+
+.story-img {
+    flex: 1;
+    position: relative;
+}
+
+/* Frame foto dengan border neon tipis */
+.story-img img {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid #333;
+    filter: grayscale(20%); /* Sedikit pudar agar estetik */
+    transition: 0.4s;
+}
+
+.story-img:hover img {
+    filter: grayscale(0%);
+    border-color: var(--green-accent);
+    box-shadow: 0 0 30px rgba(0, 230, 118, 0.1);
+}
+
+.story-content {
+    flex: 1;
+}
+
+.story-content h2 {
+    font-size: 2.5rem;
+    color: var(--text-white);
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Garis bawah judul hijau neon */
+.story-content h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--green-accent);
+    margin-top: 10px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px var(--green-accent);
+}
+
+.story-content p {
+    color: var(--text-grey);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+/* --- 5. VISION MISSION (Dark Cards) --- */
+.vm-section {
+    padding: 100px 10%;
+    background: var(--bg-dark-grey); /* Warna selang-seling */
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.vm-card {
+    flex: 1;
+    background: var(--bg-card);
+    padding: 50px 40px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.vm-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--green-accent);
+    box-shadow: 0 10px 40px rgba(0, 230, 118, 0.1);
+}
+
+.icon-box {
+    font-size: 40px;
+    margin-bottom: 25px;
+    color: var(--green-accent);
+    background: rgba(0, 230, 118, 0.1);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.vm-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--text-white);
+}
+
+.vm-card p, .vm-card li {
+    line-height: 1.8;
+    color: var(--text-grey);
+    list-style: none; /* Hilangkan bullet default */
+}
+
+.vm-card ul {
+    padding: 0;
+}
+
+.vm-card li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* Custom Bullet Hijau */
+.vm-card li::before {
+    content: "▹";
+    color: var(--green-accent);
+    font-weight: bold;
+}
+
+/* --- 6. STATS SECTION --- */
+.stats-section {
+    padding: 80px 10%;
+    background: var(--bg-black);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: var(--text-white);
+    text-align: center;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.stat-item h2 {
+    font-size: 3.5rem;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--green-accent); /* Outline Style */
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.stat-item:hover h2 {
+    color: var(--green-accent);
+    text-shadow: 0 0 20px rgba(0, 230, 118, 0.5);
+    transition: 0.3s;
+}
+
+.stat-item p {
+    font-size: 1rem;
+    color: var(--text-grey);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* --- 7. TEAM SECTION --- */
+.team-section {
+    padding: 100px 10%;
+    background: var(--bg-dark-grey);
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--text-white);
+}
+
+.team-desc {
+    margin-bottom: 60px;
+    color: var(--text-grey);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    width: 280px;
+    text-align: center;
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.team-card:hover {
+    border-color: var(--green-accent);
+    transform: translateY(-5px);
+}
+
+.team-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #333; /* Border abu */
+    padding: 5px;
+    background: var(--bg-black);
+    transition: 0.3s;
+}
+
+.team-card:hover img {
+    border-color: var(--green-accent); /* Border jadi hijau saat hover */
+}
+
+.team-card h3 {
+    font-size: 1.2rem;
+    color: var(--text-white);
+    margin-bottom: 5px;
+}
+
+.team-card span {
+    color: var(--green-accent);
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-col h4 { color: var(--text-white); margin-bottom: 25px; }
+.footer-menu, .contact-list { list-style: none; padding: 0; }
+.footer-menu li { margin-bottom: 12px; }
+.footer-menu a { color: var(--text-grey); text-decoration: none; transition: 0.3s; }
+.footer-menu a:hover { color: var(--green-accent); }
+.contact-list li { display: flex; gap: 10px; margin-bottom: 15px; }
+.contact-list i { color: var(--green-accent); }
+.social-links { display: flex; gap: 15px; }
+.social-links a {
+    display: flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px; background: rgba(255,255,255,0.1);
+    color: white; border-radius: 50%; text-decoration: none; transition: 0.3s;
+}
+.social-links a:hover { background: var(--green-accent); color: black; }
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .story-section { flex-direction: column; text-align: center; }
+    .story-content h2::after { margin: 10px auto 0; }
+    .vm-section { flex-direction: column; }
+    .about-hero h1 { font-size: 2.5rem; }
+    .navbar { padding: 15px 20px; }
+    .menu { display: none; }
+}

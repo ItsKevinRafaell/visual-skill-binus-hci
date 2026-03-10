@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Akun - InvestSkill</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="stylesheet" href="css/style-register.css">
+    <link rel="stylesheet" href="css/template.css"> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    
+   <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="InvestSkill Logo" width="120px">
+            </div>
+            <ul class="menu">
+                <li><a href="/index.html">Beranda</a></li>
+                <li><a href="/career.html">Karir</a></li>
+                <li><a href="/course.html">Kursus</a></li>
+                <li><a href="/about.html">Tentang Kami</a></li>
+                <li><a href="/register.html">Daftar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="register-section">
+        <div class="left">
+            <img src="assets/hero.png" alt="Register Image">
+            <div class="overlay-text">
+                <h2>Mulai Perjalanan Investasimu</h2>
+                <p>Bergabunglah dengan komunitas trader terbesar dan akses materi eksklusif sekarang juga.</p>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="form-wrapper">
+                <h2>Buat Akun Baru</h2>
+                <p class="subtitle">Lengkapi data diri kamu untuk mulai belajar.</p>
+                
+                <form action="#">
+                    <div class="input-box">
+                        <label>Nama Lengkap</label>
+                        <input type="text" placeholder="Contoh: Kevin Pierre" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Email</label>
+                        <input type="email" placeholder="nama@email.com" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Password</label>
+                        <input type="password" placeholder="Minimal 8 karakter" required>
+                    </div>
+
+                    <div class="input-box checkbox-wrapper" style="display:flex; gap:10px; align-items:center;">
+                        <input type="checkbox" id="terms" required style="width:auto;">
+                        <label for="terms" style="margin:0; font-size:0.9rem; color: #b0b0b0;">
+                            Saya setuju dengan <a href="#" class="tnc-trigger" style="color:#00E676; text-decoration:none;">Syarat & Ketentuan</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-daftar">Daftar Sekarang</button>
+                </form>
+
+                <p class="login-link">
+                    Sudah punya akun? <a href="#">Masuk di sini</a>
+                </p>       
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-container"> 
+            <div class="footer-col about-col">
+                <img src="assets/logo.png" alt="InvestSkill Logo" class="footer-logo" width="120px" style="filter: brightness(0) invert(1);"> 
+                <p>InvestSkill adalah platform edukasi pasar modal terpercaya untuk membantu Anda mencapai kebebasan finansial melalui investasi cerdas.</p>
+                <div class="social-links">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-linkedin-fill"></i></a>
+                    <a href="#"><i class="ri-youtube-fill"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navigasi Cepat</h4>
+                <ul class="footer-menu">
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#">Kelas Saham</a></li>
+                    <li><a href="#">Mentor Kami</a></li>
+                    <li><a href="#">Tentang Kami</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Bantuan & Legal</h4>
+                <ul class="footer-menu">
+                    <li><a href="#">FAQ (Tanya Jawab)</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                    <li><a href="#">Hubungi Kami</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h4>Hubungi Kami</h4>
+                <ul class="contact-list">
+                    <li><i class="ri-mail-line"></i> support@investskill.com</li>
+                    <li><i class="ri-whatsapp-line"></i> +62 812-3456-7890</li>
+                    <li><i class="ri-map-pin-line"></i> Jakarta Selatan, Indonesia</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 InvestSkill. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div id="tncModal" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Syarat & Ketentuan</h2>
+            <span class="close-btn">&times;</span>
+        </div>
+        <div class="modal-body">
+            <p>Selamat datang di InvestSkill. Harap baca syarat dan ketentuan ini dengan saksama sebelum menggunakan layanan kami.</p>
+            
+            <h3>1. Akun Pengguna</h3>
+            <p>Anda bertanggung jawab untuk menjaga kerahasiaan akun dan password Anda. Kami tidak bertanggung jawab atas kerugian akibat kelalaian pengguna.</p>
+            
+            <h3>2. Risiko Investasi</h3>
+            <p>Segala materi edukasi di InvestSkill bersifat informatif. Keputusan investasi sepenuhnya berada di tangan Anda. Pasar modal memiliki risiko, dan kami tidak menjamin keuntungan pasti.</p>
+            
+            <h3>3. Larangan</h3>
+            <p>Dilarang menyebarkan ulang materi berbayar (video kursus, modul) tanpa izin tertulis dari InvestSkill. Pelanggaran akan diproses secara hukum.</p>
+            
+            <h3>4. Pembayaran & Refund</h3>
+            <p>Pembayaran untuk kelas bersifat final. Refund hanya dapat diajukan jika terjadi kesalahan sistem dari pihak kami.</p>
+            
+            <p>Dengan mendaftar, Anda menyetujui semua poin di atas.</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn-agree" id="btnAgree">Saya Mengerti</button>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script>
+    // Ambil elemen
+    const modal = document.getElementById("tncModal");
+    const closeBtn = document.querySelector(".close-btn");
+    const agreeBtn = document.getElementById("btnAgree");
+    
+    // Ambil semua link yang mengarah ke T&C (bisa di footer atau di form register)
+    // Pastikan link T&C kamu punya class="tnc-trigger" atau id="openTnc"
+    const triggers = document.querySelectorAll('.tnc-trigger'); 
+
+    // Fungsi Buka Modal
+    triggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault(); // Mencegah link pindah halaman
+            modal.style.display = "block";
+        });
+    });
+
+    // Fungsi Tutup Modal (Klik X)
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Fungsi Tutup Modal (Klik Tombol Saya Mengerti)
+    agreeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Fungsi Tutup Modal (Klik di luar kotak)
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</html>
