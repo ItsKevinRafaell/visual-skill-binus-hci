@@ -1,324 +1,304 @@
-
-
 .hero-section {
-    min-height: 70vh; /* Tinggi sedikit ditambah agar gambar lebih terlihat */
+    min-height: 68vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 100px 10%; 
-    position: relative;
-    
-    /* IMPLEMENTASI BACKGROUND IMAGE */
-    /* Layer 1: Gradasi hitam transparan (agar teks terbaca) */
-    /* Layer 2: URL Gambar Anda */
-    background: linear-gradient(rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.9)), url('../assets/career2.png');
-    
-    /* Pengaturan agar gambar responsive dan di tengah */
+    padding: 100px 20px;
+    background: linear-gradient(rgba(5, 5, 5, 0.75), rgba(5, 5, 5, 0.9)), url("../assets/career/career2.png");
     background-size: cover;
-    background-position: center center;
-    background-attachment: fixed; /* Efek Parallax (opsional, hapus baris ini jika tidak suka gambarnya diam saat discroll) */
-}
-
-/* Pastikan hero content memiliki z-index agar di atas background */
-.hero-content {
-    max-width: 800px;
-    z-index: 2;
-    position: relative;
+    background-position: center;
 }
 
 .hero-content {
     max-width: 800px;
-    z-index: 2;
-    padding: 0; /* Reset padding */
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+    margin: 0 0 20px;
+    font-size: 3.2rem;
     color: var(--text-white);
-    font-weight: 700;
-    text-shadow: 0 0 20px rgba(0, 230, 118, 0.3);
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-    color: var(--text-grey);
+    margin: 0 0 32px;
+    font-size: 1.1rem;
     line-height: 1.6;
+    color: var(--text-grey);
 }
 
 .btn-cta {
-    padding: 15px 40px;
+    display: inline-block;
+    padding: 14px 36px;
     background: var(--green-accent);
-    color: #000;
+    color: var(--text-white);
     text-decoration: none;
     border-radius: 50px;
     font-weight: 700;
-    transition: 0.3s;
-    box-shadow: 0 0 15px rgba(0, 230, 118, 0.3);
 }
 
-.btn-cta:hover {
-    background: var(--text-white);
-    box-shadow: 0 0 25px rgba(0, 230, 118, 0.6);
-    transform: translateY(-3px);
-}
-
-/* --- 4. BENEFITS SECTION (Glass Cards) --- */
 .join-section {
-    padding: 100px 20px;
+    padding: 90px 20px;
     background: var(--bg-black);
     text-align: center;
 }
 
-.join-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 60px;
+.join-section h2,
+.hiring-section h2,
+.open-position-section h2 {
+    margin: 0 0 50px;
+    font-size: 2.4rem;
     color: var(--text-white);
 }
 
 .benefit-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
 }
 
 .benefit-card {
     background: var(--bg-card);
-    padding: 40px 30px;
-    border-radius: 20px;
     border: 1px solid #333;
-    transition: all 0.4s ease;
+    border-radius: 18px;
+    padding: 32px 26px;
     text-align: left;
-    position: relative;
-    overflow: hidden;
 }
 
-.benefit-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--green-accent);
-    box-shadow: 0 10px 40px rgba(0, 230, 118, 0.1);
-}
-
-/* Icon Box Style (Sama seperti Index) */
 .icon-box {
-    width: 60px;
-    height: 60px;
-    background: rgba(0, 230, 118, 0.05);
-    border: 1px solid rgba(0, 230, 118, 0.2);
-    border-radius: 15px;
+    width: 56px;
+    height: 56px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 25px;
-    transition: 0.3s;
+    border-radius: 14px;
+    background: rgba(0, 230, 118, 0.08);
+    border: 1px solid rgba(0, 230, 118, 0.2);
 }
 
 .icon-box i {
-    font-size: 28px;
+    font-size: 26px;
     color: var(--green-accent);
 }
 
-.benefit-card:hover .icon-box {
-    background: var(--green-accent);
-    box-shadow: 0 0 15px rgba(0, 230, 118, 0.5);
+.benefit-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+    color: var(--text-white);
 }
 
-.benefit-card:hover .icon-box i { color: #000; }
+.benefit-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-grey);
+}
 
-.benefit-card h3 { color: var(--text-white); margin-bottom: 10px; font-size: 1.4rem; }
-.benefit-card p { color: var(--text-grey); font-size: 0.95rem; line-height: 1.6; }
-
-/* --- 5. HIRING STEPS (Outline Numbers) --- */
 .hiring-section {
-    padding: 100px 20px;
+    padding: 90px 20px;
     background: var(--bg-dark-grey);
     text-align: center;
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
 }
 
-.hiring-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 80px;
-    color: var(--text-white);
-}
-
 .steps-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 24px;
 }
 
 .step-item {
-    flex: 1;
-    min-width: 220px;
     background: var(--bg-card);
-    padding: 30px;
-    border-radius: 20px;
     border: 1px solid #333;
-    position: relative;
+    border-radius: 18px;
+    padding: 28px;
     text-align: left;
-    transition: 0.3s;
 }
 
-.step-item:hover {
-    border-color: var(--green-accent);
-    transform: translateY(-5px);
-}
-
-/* Angka Outline Besar di Belakang */
 .step-number {
-    position: absolute;
-    top: -30px;
-    right: 20px;
-    font-size: 4rem;
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 2.8rem;
     font-weight: 800;
+    line-height: 1;
     color: transparent;
-    -webkit-text-stroke: 2px #333;
-    opacity: 0.5;
-    transition: 0.3s;
-    background: none; /* Reset background hijau lama */
-    width: auto; height: auto;
-}
-
-.step-item:hover .step-number {
     -webkit-text-stroke: 2px var(--green-accent);
-    opacity: 1;
-    text-shadow: 0 0 20px rgba(0, 230, 118, 0.3);
 }
 
-.step-item h3 { color: var(--text-white); font-size: 1.2rem; margin-top: 20px; }
-.step-item p { color: var(--text-grey); font-size: 0.9rem; }
-
-/* --- 6. JOB LISTINGS --- */
-.open-position-section {
-    max-width: 1200px; margin: 0 auto 50px;
-    background: var(--bg-black);
-}
-
-.open-position-section h2 {
+.step-item h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
     color: var(--text-white);
-    font-size: 2.5rem;
 }
 
-.job-category { 
-    padding: 20px 30px;
- }
+.step-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-grey);
+}
+
+.open-position-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 20px;
+}
+
+.job-category {
+    margin-bottom: 36px;
+}
 
 .job-category h3 {
+    margin: 0 0 20px;
+    padding-bottom: 12px;
+    font-size: 1.4rem;
     color: var(--green-accent);
-    font-size: 1.5rem;
     border-bottom: 1px solid #333;
-    padding-bottom: 15px;
+}
+
+.job-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 .job-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 24px 28px;
     background: var(--bg-card);
     border: 1px solid #333;
-    padding: 25px 30px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.3s;
+    border-radius: 14px;
 }
 
-.job-card:hover {
-    border-color: var(--green-accent);
-    background: #252525;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+.job-info h4 {
+    margin: 0 0 6px;
+    font-size: 1.15rem;
+    color: var(--text-white);
 }
 
-.job-info h4 { color: var(--text-white); font-size: 1.2rem; margin-bottom: 5px; }
-.job-info span { color: var(--text-grey); font-size: 0.9rem; }
+.job-info span {
+    font-size: 0.95rem;
+    color: var(--text-grey);
+}
 
 .btn-apply {
-    padding: 10px 25px;
+    display: inline-block;
+    padding: 10px 24px;
     border: 1px solid var(--green-accent);
-    color: var(--green-accent);
     border-radius: 50px;
+    text-decoration: none;
     font-weight: 600;
-    transition: 0.3s;
+    color: var(--text-white);
+}
+
+.faq-wrapper {
+    max-width: 800px;
+    margin: 70px auto 0;
+    text-align: left;
+}
+
+.faq-wrapper h3 {
+    margin: 0 0 24px;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--text-white);
+}
+
+details {
+    margin-bottom: 16px;
+    padding: 16px 20px;
+    background: var(--bg-card);
+    border: 1px solid #333;
+    border-radius: 12px;
+}
+
+details[open] {
+    border-color: var(--green-accent);
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-white);
+}
+
+details p {
+    margin: 12px 0 0;
+    color: var(--text-grey);
+    line-height: 1.6;
+}
+
+.regist-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: var(--bg-dark-grey);
+    border-top: 1px solid #333;
+}
+
+.cta-box {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-box h2 {
+    margin: 0 0 15px;
+    color: var(--text-white);
+}
+
+.cta-box p {
+    margin: 0 0 30px;
+    color: var(--text-grey);
+    line-height: 1.6;
+}
+
+.btn-email {
+    padding: 18px 50px;
+    background: linear-gradient(45deg, var(--green-dark), var(--green-accent));
+    color: var(--text-white);
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 18px;
+    display: inline-block;
     text-decoration: none;
 }
 
-.btn-apply:hover {
-    background: var(--green-accent);
-    color: #000;
-    box-shadow: 0 0 15px rgba(0, 230, 118, 0.4);
-}
+@media (max-width: 700px) {
+    .hero-section {
+        min-height: 58vh;
+        padding: 80px 16px;
+    }
 
-/* --- 7. FAQ SECTION --- */
-.faq-wrapper {
-    margin-top: 80px;
-    max-width: 800px;
-}
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
 
-.faq-wrapper h3 { color: var(--text-white); font-size: 2rem; }
+    .join-section,
+    .hiring-section,
+    .open-position-section,
+    .regist-section {
+        padding: 70px 16px;
+    }
 
-details {
-    background: var(--bg-card);
-    margin-bottom: 15px;
-    padding: 15px 25px;
-    border-radius: 10px;
-    border: 1px solid #333;
-    transition: 0.3s;
-}
+    .job-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-details[open] { border-color: var(--green-accent); }
+    .btn-apply {
+        width: 100%;
+        text-align: center;
+    }
 
-summary {
-    color: var(--text-white);
-    font-weight: 500;
-    cursor: pointer;
-    outline: none;
-}
-
-summary:hover { color: var(--green-accent); }
-
-details p { color: var(--text-grey); margin-top: 15px; padding-left: 0; }
-
-/* --- 8. REGIST CTA --- */
-.regist-section {
-    padding: 80px 20px;
-    background: linear-gradient(45deg, var(--bg-dark-grey), #000);
-    border-top: 1px solid #333;
-    text-align: center;
-}
-
-.cta-box h2 { color: var(--text-white); margin-bottom: 15px; }
-.cta-box p { color: var(--text-grey); margin-bottom: 30px; }
-
-.btn-email {
-    background: transparent;
-    border: 2px solid var(--green-accent);
-    color: var(--green-accent);
-    padding: 15px 40px;
-    border-radius: 50px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn-email:hover {
-    background: var(--green-accent);
-    color: #000;
-    box-shadow: 0 0 20px rgba(0, 230, 118, 0.5);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .hero-content h1 { font-size: 2.5rem; }
-    .steps-wrapper { flex-direction: column; }
-    .job-card { flex-direction: column; text-align: center; gap: 15px; }
-    .btn-apply { width: 100%; display: block; }
-    .step-number { top: 10px; right: 20px; font-size: 3rem; opacity: 0.3; }
-    .menu { display: none; }
+    .faq-wrapper {
+        margin-top: 50px;
+    }
 }

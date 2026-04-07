@@ -1,410 +1,343 @@
-/* --- 1. CONFIG & VARIABLES --- */
-:root {
-    --bg-black: #050505;
-    --bg-dark-grey: #121212;
-    --bg-card: #1E1E1E;
-    --text-white: #FFFFFF;
-    --text-grey: #B0B0B0;
-    --green-accent: #00E676;
-    --font-primary: 'Poppins', sans-serif;
-}
-
-body {
-    background-color: var(--bg-black);
-    color: var(--text-white);
-    font-family: var(--font-primary);
-    margin: 0;
-}
-
-/* --- 2. NAVBAR (Global Dark Style) --- */
-.navbar {
-    background: rgba(5, 5, 5, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #333;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 15px 5%;
-}
-
-.menu { display: flex; list-style: none; padding: 0; margin: 0; }
-.menu li { margin-left: 20px; }
-.menu li a {
-    padding: 8px 16px;
-    color: var(--text-white);
-    font-weight: 500;
-    text-decoration: none;
-    transition: 0.3s;
-}
-.menu li a:hover {
-    color: var(--green-accent);
-    text-shadow: 0 0 10px rgba(0, 230, 118, 0.5);
-}
-
-/* --- 3. REGISTER SECTION --- */
 .register-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
     display: flex;
-    min-height: 100vh; /* Full screen */
-    width: 100%;
-    padding-top: 0; /* Navbar sudah sticky/fixed */
+    align-items: stretch;
 }
 
-/* BAGIAN KIRI (GAMBAR) */
+.left,
+.right {
+    width: 50%;
+}
+
 .left {
-    width: 45%; /* Sisi gambar sedikit lebih kecil */
     position: relative;
-    background: #000;
     overflow: hidden;
+    border-radius: 20px 0 0 20px;
+    background: #000;
 }
 
 .left img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.7; /* Gelapkan gambar agar teks terbaca */
-    transition: transform 5s ease;
-}
-
-/* Efek Zoom lambat pada gambar */
-.register-section:hover .left img {
-    transform: scale(1.05);
+    opacity: 0.7;
 }
 
 .overlay-text {
     position: absolute;
-    bottom: 10%;
     left: 10%;
     right: 10%;
-    color: var(--text-white);
-    z-index: 2;
+    bottom: 10%;
 }
 
 .overlay-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    font-weight: 700;
-    text-shadow: 0 0 20px rgba(0, 230, 118, 0.3);
+    margin: 0 0 12px;
+    font-size: 2.4rem;
 }
 
 .overlay-text p {
-    font-size: 1.1rem;
+    margin: 0;
     color: var(--text-grey);
-    line-height: 1.6;
 }
 
-/* BAGIAN KANAN (FORM) */
 .right {
-    width: 55%;
-    background: var(--bg-black);
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 50px;
-    position: relative;
-}
-
-/* Hiasan Glow di belakang form */
-.right::before {
-    content: '';
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background: var(--green-accent);
-    filter: blur(150px);
-    opacity: 0.1;
-    border-radius: 50%;
-    z-index: 0;
+    justify-content: center;
+    padding: 40px;
+    background: var(--bg-black);
+    border: 1px solid #333;
+    border-left: none;
+    border-radius: 0 20px 20px 0;
 }
 
 .form-wrapper {
     width: 100%;
-    max-width: 450px;
-    z-index: 1; /* Di atas glow */
-    background: rgba(30, 30, 30, 0.5); /* Semi transparan */
-    padding: 40px;
-    border-radius: 20px;
-    border: 1px solid #333;
-    backdrop-filter: blur(10px);
+    max-width: 440px;
 }
 
 .form-wrapper h2 {
-    font-size: 2rem;
-    color: var(--text-white);
-    margin-bottom: 10px;
+    margin: 0 0 8px;
     text-align: center;
+    font-size: 2rem;
 }
 
 .subtitle {
-    color: var(--text-grey);
-    margin-bottom: 40px;
-    font-size: 0.95rem;
+    margin: 0 0 28px;
     text-align: center;
+    color: var(--text-grey);
+    font-size: 0.95rem;
 }
 
-/* INPUT STYLES */
 .input-box {
-    margin-bottom: 25px;
+    margin-bottom: 18px;
 }
 
 .input-box label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
     font-weight: 500;
-    color: var(--text-white);
-    font-size: 0.9rem;
 }
 
-.input-box input {
+.input-box input,
+.input-box select {
     width: 100%;
-    padding: 15px;
-    background: var(--bg-dark-grey); /* Input gelap */
+    padding: 14px 15px;
     border: 1px solid #333;
     border-radius: 10px;
-    font-size: 1rem;
+    background: var(--bg-dark-grey);
     color: var(--text-white);
-    font-family: var(--font-primary);
-    transition: all 0.3s ease;
-    box-sizing: border-box;
+    font: inherit;
 }
 
-/* Saat input diklik */
-.input-box input:focus {
-    border-color: var(--green-accent);
+.input-box input:focus,
+.input-box select:focus {
     outline: none;
-    box-shadow: 0 0 10px rgba(0, 230, 118, 0.2);
-    background: #000;
+    border-color: var(--green-accent);
 }
 
-/* Hack untuk Autocomplete Chrome agar tidak jadi putih */
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px var(--bg-dark-grey) inset !important;
-    -webkit-text-fill-color: white !important;
+.input-box input[aria-invalid="true"],
+.input-box select[aria-invalid="true"] {
+    border-color: #ff6b6b;
 }
 
-/* BUTTON */
+.error-text {
+    display: block;
+    min-height: 18px;
+    margin-top: 6px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #ff6b6b;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.checkbox-wrapper input {
+    width: auto;
+    margin-top: 4px;
+}
+
+.checkbox-wrapper label {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-grey);
+}
+
+#terms[aria-invalid="true"] {
+    outline: 1px solid #ff6b6b;
+    outline-offset: 2px;
+}
+
+#termsError {
+    margin-bottom: 12px;
+}
+
+.tnc-trigger {
+    color: var(--green-accent);
+    text-decoration: none;
+}
+
 .btn-daftar {
     width: 100%;
     padding: 15px;
-    background: var(--green-accent);
-    color: #000; /* Teks Hitam */
+    margin-top: 8px;
     border: none;
-    border-radius: 50px;
-    font-size: 1rem;
+    border-radius: 999px;
+    background: var(--green-accent);
+    color: #000;
+    font: inherit;
     font-weight: 700;
     cursor: pointer;
     transition: 0.3s;
-    margin-top: 10px;
-    font-family: var(--font-primary);
-    box-shadow: 0 0 20px rgba(0, 230, 118, 0.3);
 }
 
 .btn-daftar:hover {
-    background: var(--text-white);
-    box-shadow: 0 0 30px rgba(0, 230, 118, 0.5);
-    transform: translateY(-2px);
+    background: #fff;
 }
 
-/* LINK LOGIN */
 .login-link {
+    margin-top: 20px;
     text-align: center;
-    margin-top: 25px;
-    font-size: 0.9rem;
     color: var(--text-grey);
+    font-size: 0.95rem;
 }
 
 .login-link a {
     color: var(--green-accent);
     text-decoration: none;
     font-weight: 600;
-    transition: 0.3s;
 }
 
-.login-link a:hover {
-    text-decoration: underline;
-    text-shadow: 0 0 10px rgba(0, 230, 118, 0.4);
-}
-
-/* --- 4. FOOTER (Global Dark Style) --- */
-.site-footer {
-    background-color: #000;
-    color: var(--text-grey);
-    padding: 70px 20px 20px;
-    border-top: 1px solid #222;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 40px;
-}
-.footer-col h4 { color: var(--text-white); margin-bottom: 25px; }
-.footer-menu, .contact-list { list-style: none; padding: 0; }
-.footer-menu li { margin-bottom: 12px; }
-.footer-menu a { color: var(--text-grey); text-decoration: none; transition: 0.3s; }
-.footer-menu a:hover { color: var(--green-accent); }
-.contact-list li { display: flex; gap: 10px; margin-bottom: 15px; }
-.contact-list i { color: var(--green-accent); }
-.social-links { display: flex; gap: 15px; }
-.social-links a {
-    display: flex; align-items: center; justify-content: center;
-    width: 40px; height: 40px; background: rgba(255,255,255,0.1);
-    color: white; border-radius: 50%; text-decoration: none; transition: 0.3s;
-}
-.social-links a:hover { background: var(--green-accent); color: black; }
-.footer-bottom { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #222; }
-
-
-/* --- RESPONSIVE MOBILE --- */
-@media (max-width: 768px) {
-    .register-section {
-        flex-direction: column; /* Stack ke bawah */
-    }
-
-    .left {
-        display: none; /* Sembunyikan gambar di HP agar fokus form */
-        /* Atau ganti width: 100%; height: 200px; jika ingin tetap ada */
-    }
-
-    .right {
-        width: 100%;
-        padding: 40px 20px;
-        min-height: 80vh; /* Agar full di HP */
-    }
-
-    .form-wrapper {
-        box-shadow: none;
-        border: none;
-        background: transparent;
-        padding: 0;
-    }
-    
-    .menu { display: none; }
-
-}
-
-/* --- MODAL POPUP STYLES --- */
-
-/* Latar Belakang Gelap (Overlay) */
 .modal-overlay {
-    display: none; /* PENTING: Sembunyikan saat awal */
-    position: fixed; 
-    z-index: 2000; /* Harus lebih tinggi dari Navbar */
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    background-color: rgba(0, 0, 0, 0.85); /* Hitam transparan */
-    backdrop-filter: blur(5px);
-    animation: fadeIn 0.3s;
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.85);
 }
 
-/* Kotak Modal */
 .modal-content {
-    background-color: #1E1E1E; /* Warna Card Gelap */
-    margin: 5% auto; /* Posisi dari atas */
-    padding: 0;
-    border: 1px solid #333;
     width: 90%;
     max-width: 600px;
-    border-radius: 15px;
-    box-shadow: 0 0 30px rgba(0, 230, 118, 0.2);
-    position: relative;
-    animation: slideUp 0.3s;
+    max-height: 85vh;
+    margin: 40px auto;
+    background: var(--bg-card);
+    border: 1px solid #333;
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
-    max-height: 85vh; /* Agar bisa discroll di layar kecil */
+    overflow: hidden;
 }
 
-/* Header Modal */
+.modal-header,
+.modal-footer {
+    padding: 20px 24px;
+}
+
 .modal-header {
-    padding: 20px 30px;
-    border-bottom: 1px solid #333;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
 }
 
 .modal-header h2 {
     margin: 0;
-    font-size: 1.5rem;
-    color: #FFF;
+    font-size: 1.4rem;
 }
 
-/* Tombol Close (X) */
 .close-btn {
-    color: #B0B0B0;
     font-size: 28px;
-    font-weight: bold;
+    color: var(--text-grey);
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .close-btn:hover {
-    color: #00E676;
+    color: var(--green-accent);
 }
 
-/* Isi Modal */
 .modal-body {
-    padding: 30px;
+    padding: 24px;
     overflow-y: auto;
-    color: #B0B0B0;
-    line-height: 1.6;
-    font-size: 0.95rem;
-    text-align: left; /* Pastikan teks rata kiri */
+    color: var(--text-grey);
+    text-align: left;
 }
 
 .modal-body h3 {
-    color: #00E676;
-    margin-top: 20px;
-    font-size: 1.1rem;
+    margin: 20px 0 8px;
+    color: var(--green-accent);
+    font-size: 1.05rem;
 }
 
-/* Footer Modal */
 .modal-footer {
-    padding: 20px 30px;
     border-top: 1px solid #333;
     text-align: right;
 }
 
-/* Tombol Setuju */
 .btn-agree {
-    background: #00E676;
-    color: #000;
+    padding: 10px 24px;
     border: none;
-    padding: 10px 25px;
-    border-radius: 50px;
-    font-weight: bold;
+    border-radius: 999px;
+    background: var(--green-accent);
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-agree:hover {
+    background: #fff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 30px var(--bg-dark-grey) inset !important;
+    -webkit-text-fill-color: var(--text-white) !important;
+}
+
+input[type="date"] {
+    color-scheme: dark;
+    cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.85;
+    filter: invert(1);
+}
+
+.success-content {
+    max-width: 420px;
+}
+
+.success-box {
+    padding: 32px 24px;
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--green-accent);
+    margin-bottom: 12px;
+}
+
+.success-box h2 {
+    margin: 0 0 10px;
+    font-size: 1.8rem;
+    color: var(--text-white);
+}
+
+.success-box p {
+    margin: 0 0 24px;
+    color: var(--text-grey);
+}
+
+.btn-success {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 999px;
+    background: var(--green-accent);
+    color: #000;
+    font: inherit;
+    font-weight: 700;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.btn-agree:hover {
-    background: white;
-    box-shadow: 0 0 15px rgba(0, 230, 118, 0.4);
+.btn-success:hover {
+    background: #fff;
 }
 
-/* Animasi */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
+@media (max-width: 700px) {
+    .register-section {
+        margin: 24px auto;
+        padding: 0 16px;
+    }
 
-@keyframes slideUp {
-    from { transform: translateY(50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    .left {
+        display: none;
+    }
+
+    .right {
+        width: 100%;
+        padding: 24px;
+        border-left: 1px solid #333;
+        border-radius: 20px;
+    }
+
+    .modal-content {
+        width: 100%;
+        margin: 20px auto;
+        max-height: 90vh;
+    }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kursus - InvestSkill</title>
+    <title>Kursus - VisualSkill</title>
     <link rel="icon" type="image/png" href="assets/logo.png">
     <link rel="stylesheet" href="css/style-course.css">
     <link rel="stylesheet" href="css/template.css">
@@ -14,174 +14,203 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <img src="assets/logo.png" alt="InvestSkill Logo" width="120px">
+                <img src="assets/logo.png" alt="Logo VisualSkill" width="120">
             </div>
+
             <ul class="menu">
-                <li><a href="/index.html">Beranda</a></li>
-                <li><a href="/career.html">Karir</a></li>
-                <li><a href="/course.html">Kursus</a></li>
-                <li><a href="/about.html">Tentang Kami</a></li>
-                <li><a href="/register.html">Daftar</a></li>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="career.html">Karir</a></li>
+                <li><a href="course.html">Kursus</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a class="btn" href="/register.html">Daftar</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="course-page-wrapper">
-        
-        <div class="course-header">
-            <h1>Katalog Kelas Investasi</h1>
-            <p>Tingkatkan keahlian trading dan investasimu dengan kurikulum terstruktur dari para ahli.</p>
-            
+    <main class="course-page-wrapper">
+        <section class="course-header">
+            <h1>Katalog Kelas VisualSkill</h1>
+            <p>Tingkatkan pengetahuan dan keterampilanmu melalui kelas yang terstruktur, praktis, dan mudah dipahami.</p>
+
             <div class="course-filter">
-                <button class="filter-btn active">Semua</button>
-                <button class="filter-btn">Pemula</button>
-                <button class="filter-btn">Analisis Teknikal</button>
-                <button class="filter-btn">Fundamental</button>
+                <button class="filter-btn active" type="button">Semua</button>
+                <button class="filter-btn" type="button">Pemula</button>
+                <button class="filter-btn" type="button">Teknikal</button>
+                <button class="filter-btn" type="button">Fundamental</button>
             </div>
-        </div>
+        </section>
 
-        <div class="course-grid">
-
-            <div class="course-card">
+        <section class="course-grid">
+            <article class="course-card">
                 <div class="card-image">
-                    <img src="assets/courses/basic.png" alt="Saham Pemula" onerror="this.src='https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=600&auto=format&fit=crop'">
+                    <img src="assets/courses/basic.png" alt="Kelas dasar investasi saham">
                     <span class="badge beginner">Pemula</span>
                 </div>
+
                 <div class="card-content">
                     <div class="rating">
-                        <i class="ri-star-fill"></i> 4.9 (1.2k Review)
+                        <i class="ri-star-fill"></i>
+                        <span>4.9 (1.2k ulasan)</span>
                     </div>
-                    <h3>Stock Market 101: Pemula</h3>
-                    <p>Panduan lengkap memulai investasi saham dari nol. Mengenal IHSG, sekuritas, dan cara beli saham.</p>
+
+                    <h3>Dasar Investasi Saham</h3>
+                    <p>Pelajari langkah awal memulai investasi saham, mulai dari membuka akun hingga memahami cara membeli saham dengan benar.</p>
+
                     <div class="card-meta">
                         <span><i class="ri-time-line"></i> 4 Jam</span>
                         <span><i class="ri-video-line"></i> 12 Video</span>
                     </div>
+
                     <div class="card-footer">
                         <span class="price">Rp 199.000</span>
                         <a href="#" class="btn-enroll">Daftar Kelas</a>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="course-card">
+            <article class="course-card">
                 <div class="card-image">
-                    <img src="assets/courses/teknikal.png" alt="Analisis Teknikal" onerror="this.src='https://images.unsplash.com/photo-1642543492481-44e81e3914a7?q=80&w=600&auto=format&fit=crop'">
+                    <img src="assets/courses/teknikal.png" alt="Kelas analisis teknikal">
                     <span class="badge intermediate">Menengah</span>
                 </div>
+
                 <div class="card-content">
                     <div class="rating">
-                        <i class="ri-star-fill"></i> 4.8 (850 Review)
+                        <i class="ri-star-fill"></i>
+                        <span>4.8 (850 ulasan)</span>
                     </div>
-                    <h3>Mastering Technical Analysis</h3>
-                    <p>Pelajari cara membaca chart, candlestick pattern, indikator MA, MACD, dan RSI untuk profit maksimal.</p>
+
+                    <h3>Analisis Teknikal untuk Trader</h3>
+                    <p>Pelajari cara membaca grafik harga, pola candlestick, serta indikator penting untuk membantu keputusan entry dan exit.</p>
+
                     <div class="card-meta">
                         <span><i class="ri-time-line"></i> 6 Jam</span>
                         <span><i class="ri-video-line"></i> 18 Video</span>
                     </div>
+
                     <div class="card-footer">
                         <span class="price">Rp 349.000</span>
                         <a href="#" class="btn-enroll">Daftar Kelas</a>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="course-card">
+            <article class="course-card">
                 <div class="card-image">
-                    <img src="assets/courses/funda.png" alt="Analisis Fundamental" onerror="this.src='https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=600&auto=format&fit=crop'">
+                    <img src="assets/courses/funda.png" alt="Kelas analisis fundamental">
                     <span class="badge intermediate">Menengah</span>
                 </div>
+
                 <div class="card-content">
                     <div class="rating">
-                        <i class="ri-star-fill"></i> 5.0 (500 Review)
+                        <i class="ri-star-fill"></i>
+                        <span>5.0 (500 ulasan)</span>
                     </div>
-                    <h3>Bedah Laporan Keuangan</h3>
-                    <p>Temukan saham "salah harga" (undervalued) dengan analisis fundamental dan rasio keuangan.</p>
+
+                    <h3>Membaca Laporan Keuangan</h3>
+                    <p>Pahami laporan keuangan perusahaan dan kenali dasar analisis fundamental untuk memilih saham dengan lebih cermat.</p>
+
                     <div class="card-meta">
                         <span><i class="ri-time-line"></i> 5 Jam</span>
                         <span><i class="ri-video-line"></i> 15 Video</span>
                     </div>
+
                     <div class="card-footer">
                         <span class="price">Rp 399.000</span>
                         <a href="#" class="btn-enroll">Daftar Kelas</a>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="course-card">
+            <article class="course-card">
                 <div class="card-image">
-                    <img src="assets/courses/crypto.png" alt="Cryptocurrency" onerror="this.src='https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=600&auto=format&fit=crop'">
+                    <img src="assets/courses/crypto.png" alt="Kelas dasar aset kripto">
                     <span class="badge beginner">Pemula</span>
                 </div>
+
                 <div class="card-content">
                     <div class="rating">
-                        <i class="ri-star-fill"></i> 4.7 (300 Review)
+                        <i class="ri-star-fill"></i>
+                        <span>4.7 (300 ulasan)</span>
                     </div>
-                    <h3>Intro to Cryptocurrency</h3>
-                    <p>Memahami teknologi Blockchain, Bitcoin, dan Altcoin serta cara trading aset kripto dengan aman.</p>
+
+                    <h3>Dasar Aset Kripto</h3>
+                    <p>Kenali konsep blockchain, aset kripto, dan langkah dasar memahami pasar kripto secara lebih aman dan terarah.</p>
+
                     <div class="card-meta">
                         <span><i class="ri-time-line"></i> 3 Jam</span>
                         <span><i class="ri-video-line"></i> 10 Video</span>
                     </div>
+
                     <div class="card-footer">
                         <span class="price">Rp 149.000</span>
                         <a href="#" class="btn-enroll">Daftar Kelas</a>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="course-card">
+            <article class="course-card">
                 <div class="card-image">
-                    <img src="assets/courses/psycho.png" alt="Psikologi Trading" onerror="this.src='https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?q=80&w=600&auto=format&fit=crop'">
-                    <span class="badge expert">Expert</span>
+                    <img src="assets/courses/psycho.png" alt="Kelas psikologi trading">
+                    <span class="badge expert">Lanjutan</span>
                 </div>
+
                 <div class="card-content">
                     <div class="rating">
-                        <i class="ri-star-fill"></i> 4.9 (200 Review)
+                        <i class="ri-star-fill"></i>
+                        <span>4.9 (200 ulasan)</span>
                     </div>
-                    <h3>Trading Psychology & Risk</h3>
-                    <p>Kunci sukses trader: Strategi mental dan money management agar portofolio tetap hijau.</p>
+
+                    <h3>Psikologi Trading dan Risiko</h3>
+                    <p>Pelajari cara mengelola emosi, disiplin, dan risiko agar keputusan trading lebih konsisten dan terukur.</p>
+
                     <div class="card-meta">
                         <span><i class="ri-time-line"></i> 4 Jam</span>
                         <span><i class="ri-video-line"></i> 14 Video</span>
                     </div>
+
                     <div class="card-footer">
                         <span class="price">Rp 299.000</span>
                         <a href="#" class="btn-enroll">Daftar Kelas</a>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="course-card">
+            <article class="course-card">
                 <div class="card-image">
-                    <img src="assets/courses/planner.png" alt="Financial Planning" onerror="this.src='https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=600&auto=format&fit=crop'">
+                    <img src="assets/courses/planner.png" alt="Kelas perencanaan keuangan pribadi">
                     <span class="badge beginner">Pemula</span>
                 </div>
+
                 <div class="card-content">
                     <div class="rating">
-                        <i class="ri-star-fill"></i> 4.8 (1.5k Review)
+                        <i class="ri-star-fill"></i>
+                        <span>4.8 (1.5k ulasan)</span>
                     </div>
-                    <h3>Personal Financial Planning</h3>
-                    <p>Cara mengatur arus kas, dana darurat, dan asuransi sebelum terjun ke dunia investasi.</p>
+
+                    <h3>Perencanaan Keuangan Pribadi</h3>
+                    <p>Atur arus kas, dana darurat, dan tujuan keuangan sebelum melangkah lebih jauh ke dunia investasi.</p>
+
                     <div class="card-meta">
                         <span><i class="ri-time-line"></i> 3 Jam</span>
                         <span><i class="ri-video-line"></i> 8 Video</span>
                     </div>
+
                     <div class="card-footer">
-                        <span class="price strike">Gratis</span>
+                        <span class="price free">Gratis</span>
                         <a href="#" class="btn-enroll">Akses Sekarang</a>
                     </div>
                 </div>
-            </div>
-
-        </div>
-    </div>
+            </article>
+        </section>
+    </main>
 
     <footer class="site-footer">
-        <div class="footer-container"> 
+        <div class="footer-container">
             <div class="footer-col about-col">
-                <img src="assets/logo.png" alt="InvestSkill Logo" class="footer-logo" width="120px"> 
-                <p>InvestSkill adalah platform edukasi pasar modal terpercaya untuk membantu Anda mencapai kebebasan finansial melalui investasi cerdas.</p>
+                <img src="assets/logo.png" alt="Logo VisualSkill" class="footer-logo" width="120">
+                <p>VisualSkill adalah platform pembelajaran digital yang membantu pengguna mengembangkan keterampilan praktis dengan cara yang lebih mudah, terarah, dan relevan.</p>
+
                 <div class="social-links">
                     <a href="#"><i class="ri-facebook-fill"></i></a>
                     <a href="#"><i class="ri-instagram-line"></i></a>
@@ -193,36 +222,35 @@
             <div class="footer-col">
                 <h4>Navigasi Cepat</h4>
                 <ul class="footer-menu">
-                    <li><a href="#">Beranda</a></li>
-                    <li><a href="#">Kelas Saham</a></li>
-                    <li><a href="#">Mentor Kami</a></li>
-                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="course.html">Kursus</a></li>
+                    <li><a href="career.html">Karir</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
                 <h4>Bantuan & Legal</h4>
                 <ul class="footer-menu">
-                    <li><a href="#">FAQ (Tanya Jawab)</a></li>
-                    <li><a href="#">Kebijakan Privasi</a></li>
-                    <li><a href="#">Syarat & Ketentuan</a></li>
-                    <li><a href="#">Hubungi Kami</a></li>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#">Karir</a></li>
+                    <li><a href="#">Kursus</a></li>
+                    <li><a href="#">Tentang Kami</a></li>
                 </ul>
             </div>
 
             <div class="footer-col contact-col">
                 <h4>Hubungi Kami</h4>
                 <ul class="contact-list">
-                    <li><i class="ri-mail-line"></i> support@investskill.com</li>
+                    <li><i class="ri-mail-line"></i> support@visualskill.com</li>
                     <li><i class="ri-whatsapp-line"></i> +62 812-3456-7890</li>
                     <li><i class="ri-map-pin-line"></i> Jakarta Selatan, Indonesia</li>
                 </ul>
             </div>
-
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 InvestSkill. All Rights Reserved.</p>
+            <p>&copy; 2026 VisualSkill. All Rights Reserved.</p>
         </div>
     </footer>
 </body>

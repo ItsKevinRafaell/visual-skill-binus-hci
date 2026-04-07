@@ -1,12 +1,11 @@
-/* --- 1. VARIABEL & RESET --- */
 :root {
-    --bg-black: #050505;       /* Hitam Pekat */
-    --bg-dark-grey: #121212;   /* Abu Sangat Gelap */
-    --bg-card: #1E1E1E;        /* Background Card */
+    --bg-black: #050505;
+    --bg-dark-grey: #121212;
+    --bg-card: #1E1E1E;
     --text-white: #FFFFFF;
     --text-grey: #B0B0B0;
-    --green-accent: #00E676;   /* Hijau Elegan (Glowing) */
-    --green-dark: #00C853;     /* Hijau lebih tua untuk gradasi */
+    --green-accent: #00E676;
+    --green-dark: #00C853;
     --font-primary: 'Poppins', sans-serif;
 }
 
@@ -15,72 +14,81 @@ body {
     font-family: var(--font-primary);
     background-color: var(--bg-black);
     color: var(--text-white);
+    line-height: 1.6;
 }
 
-/* --- 2. NAVBAR (Dark Mode) --- */
 .navbar {
-    background: rgba(5, 5, 5, 0.95); /* Hitam Transparan */
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5); /* Shadow lebih gelap */
     position: sticky;
     top: 0;
     z-index: 1000;
+    background: rgba(5, 5, 5, 0.95);
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .menu .btn{
+    color: var(--text-white);
+}
+
+.container,
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .container {
+    min-height: 72px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px 20px;
+    justify-content: space-between;
+}
+
+.menu,
+.footer-menu,
+.contact-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .menu {
     display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    align-items: center;
+    gap: 20px;
 }
 
-.menu li {
-    margin-left: 20px;
-}
-
-.menu li a {
-    padding: 8px 16px;
-    color: var(--text-white); /* Text Putih */
-    font-weight: 500;
-    text-decoration: none;
+.menu a {
     display: inline-block;
+    padding: 10px 16px;
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 999px;
     transition: 0.3s;
 }
 
-.menu li a:hover {
-    background: transparent;
-    color: var(--green-accent); /* Hover Hijau Neon */
-    text-shadow: 0 0 10px rgba(0, 230, 118, 0.5); /* Efek Glow */
+.menu a:hover {
+    color: var(--green-accent);
 }
 
-/* Tombol Daftar di Navbar (Opsional agar beda) */
 .menu li:last-child a {
     background: var(--green-accent);
-    color: black;
-    border-radius: 50px;
+    color: #000;
     font-weight: 600;
 }
+
 .menu li:last-child a:hover {
     background: var(--text-white);
-    color: black;
-    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+    color: #000;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.35);
 }
 
-/* --- FOOTER --- */
 .site-footer {
     background-color: #000;
     color: var(--text-grey);
-    padding: 60px 0 20px;
+    padding: 60px 0 24px;
     border-top: 1px solid #222;
 }
 
@@ -88,56 +96,80 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    gap: 30px;
 }
 
 .footer-col {
-    flex: 1;
-    min-width: 200px;
-    margin-bottom: 30px;
+    flex: 1 1 220px;
 }
 
 .footer-col h4 {
+    margin: 0 0 18px;
+    font-size: 1.1rem;
     color: var(--text-white);
-    margin-bottom: 20px;
-    font-size: 1.2rem;
 }
 
-.footer-menu, .contact-list {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-menu li, .contact-list li {
+.footer-menu li,
+.contact-list li {
     margin-bottom: 12px;
 }
 
-.footer-menu a {
+.footer-menu a,
+.contact-list a {
     color: var(--text-grey);
     text-decoration: none;
-    transition: color 0.3s;
+    transition: 0.3s;
 }
 
-.footer-menu a:hover {
+.footer-menu a:hover,
+.contact-list a:hover,
+.social-links a:hover {
     color: var(--green-accent);
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 14px;
 }
 
 .social-links a {
     color: var(--text-white);
     font-size: 1.5rem;
-    margin-right: 15px;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: var(--green-accent);
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .footer-bottom {
-    text-align: center;
-    margin-top: 40px;
+    margin-top: 30px;
     padding-top: 20px;
+    text-align: center;
     border-top: 1px solid #222;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 16px;
+        padding: 16px 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .site-footer {
+        padding: 50px 0 20px;
+    }
+
+    .footer-container {
+        gap: 24px;
+    }
+
+    .footer-col {
+        flex: 1 1 100%;
+    }
 }
